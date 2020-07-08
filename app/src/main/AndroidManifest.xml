@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.idam.idam_tech">
+
+    <uses-permission android:name="android.permission.PERMISSION_NAME" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.autofocus" />
+    <uses-feature android:name="android.hardware.flash" />
+
+    <meta-data
+        android:name="firebase_messaging_auto_init_enabled"
+        android:value="false" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppThemeLogin"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".activities.notification.NotifDetailActivity"></activity>
+        <activity android:name=".activities.packages.ProsesPackageActivity" />
+        <activity
+            android:name=".activities.promos.DetailPromoActivity"/>
+        <activity
+            android:name=".activities.notification.NotifActivity" />
+        <activity android:name=".activities.fitnesstools.AlatFitnessDetailActivity" />
+        <activity android:name=".activities.admin.HasilScannAdminActivity" />
+        <activity android:name=".activities.promos.PromoActivity"/>
+        <activity
+            android:name=".activities.admin.ScannerAdminActivity"
+            android:label="Scanner Presences"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".activities.admin.MainAdminActivity" />
+        <activity android:name=".activities.auth.LoginAdminActivity" />
+        <activity android:name=".activities.packages.UploadBuktiActivity" />
+        <activity android:name=".activities.splashscreen.LoadingActivity" />
+        <activity android:name=".activities.packages.DetailPackageActivity"/>
+        <activity android:name=".activities.histori.HistoriActivity"/>
+        <activity android:name=".activities.fitnesstools.AlatFitnessActivity"/>
+        <activity android:name=".activities.packages.PackageActivity"/>
+        <activity
+            android:name=".activities.profile.EditProfileActivity"
+            android:label="Edit Profile"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".activities.MainActivity"
+            android:theme="@style/AppThemeMain" />
+        <activity android:name=".activities.splashscreen.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activities.auth.LoginActivity" />
+        <activity android:name=".activities.auth.RegisterActivity" />
+
+        <service
+            android:name=".fcm.FirebaseMessagingReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

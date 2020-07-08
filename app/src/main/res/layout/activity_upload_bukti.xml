@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.idam.idam_tech.activities.packages.UploadBuktiActivity">
+
+    <ImageView
+        android:id="@+id/image_bukti"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/deal_icon"
+        android:layout_above="@+id/chooseFile"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="20dp"
+        />
+
+    <Button
+        android:id="@+id/chooseFile"
+        android:background="@drawable/round_bg"
+        android:textColor="@color/colorWhite"
+        android:layout_marginHorizontal="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Choose File"
+        />
+
+    <Button
+        android:layout_below="@+id/chooseFile"
+        android:id="@+id/btn_backHome"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/round_bg"
+        android:textColor="@color/colorWhite"
+        android:layout_marginHorizontal="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="SELESAI"
+        />
+</RelativeLayout>
